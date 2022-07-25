@@ -1,5 +1,5 @@
 {% set name = "zeopp-lsmo" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,11 @@ package:
 
 source:
   url: https://github.com/lsmo-epfl/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2a8581b39f3e347c7c3584394e67a26009b6a4c14856cb30eba8d61fabd94332
+  sha256: 7fea06f890b1adc8634c380e0772728e12638b280387d76ada7a57db0b5bbffa
 
 build:
-  number: 2
+  number: 0
+
   skip: true  # [ win]
 
 requirements:
