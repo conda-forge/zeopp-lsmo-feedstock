@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+
   skip: true  # [ win]
 
 requirements:
@@ -20,7 +21,7 @@ requirements:
     - make
     - libtool
   host:
-    - eigen ==3.2.8
+    - eigen >=3.2.8,<3.4
 
 test:
   commands:
