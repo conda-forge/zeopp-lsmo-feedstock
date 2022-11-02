@@ -20,8 +20,10 @@ requirements:
     - {{ compiler('cxx') }}
     - make
     - libtool
+    - voro
   host:
     - eigen >=3.2.8,<3.4
+    - voro
 
 test:
   commands:
