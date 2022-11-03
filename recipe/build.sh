@@ -3,7 +3,7 @@
 mkdir -p ${PREFIX}/bin
 
 cd zeo++
-CFLAGS="$CFLAGS -I$PREFIX/include/eigen3 -I$PREFIX/include/voro++ -L$PREFIX/include/voro++" make
+CFLAGS="$CFLAGS -I$PREFIX/include/eigen3 -I$PREFIX/include/voro++ -L$PREFIX/lib" make
 cp network ${PREFIX}/bin/
 cd ../
 
