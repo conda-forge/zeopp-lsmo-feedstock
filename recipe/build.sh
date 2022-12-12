@@ -16,13 +16,13 @@ cd ../
 cd tests
 
 function check_changes {
-    #diff=`git diff-index --quiet HEAD --`
+    sleep 1
     diff=$(git diff --no-index $1 $2)
     rm $1
     if [ -n "$diff" ]; then
         echo "### Changes detected:"
         echo "$diff"
-        #exit 1
+        exit 1
     fi
 }
 
