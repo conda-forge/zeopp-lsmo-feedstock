@@ -17,7 +17,7 @@ cd tests
 
 function check_changes {
     sleep 1
-    diff=$(git diff --no-index $1 $2)
+    diff=$(git --no-pager diff --no-index $1 $2)
     rm $1
     if [ -n "$diff" ]; then
         echo "### Changes detected:"
