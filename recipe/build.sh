@@ -20,8 +20,8 @@ function check_changes {
     diff=$(git --no-pager diff --no-index $1 $2)
     rm $1
     if [ ! -z "$diff" ]; then
-        echo "### Changes detected:"
-        echo "$diff"
+        echo "### Changes detected:" >/dev/stderr
+        echo "$diff" >/dev/stderr
         exit 1
     fi
 }
