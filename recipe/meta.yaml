@@ -21,7 +21,7 @@ requirements:
     - make
     - libtool
   host:
-    - eigen >=3.2.8,<3.4
+    - eigen >=3.2.8
 
 test:
   commands:
