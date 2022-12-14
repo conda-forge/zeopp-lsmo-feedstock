@@ -36,14 +36,20 @@ check_changes EDI.res EDI_ref.res
 
 echo "### Testing network -ha -chan 1.5 EDI.cssr"
 network -ha -chan 1.5 EDI.cssr
+echo "### Printing EDI.chan"
+echo "$(cat EDI.chan)"
 check_changes EDI.chan EDI_ref.chan
 
 echo "### Testing network -ha -sa 1.2 1.2 2000 EDI.cssr"
 network -ha -sa 1.2 1.2 2000 EDI.cssr
+echo "### Printing EDI.chan"
+echo "$(cat EDI.sa)"
 check_changes EDI.sa EDI_ref.sa
 
 echo "### Testing network -ha -vol 1.2 1.2 50000 EDI.cssr"
 network -ha -vol 1.2 1.2 50000 EDI.cssr
+echo "### Printing EDI.vol"
+echo "$(cat EDI.vol)"
 check_changes EDI.vol EDI_ref.vol
 
 echo "### Testing network -ha -psd 1.2 1.2 50000 EDI.cssr"
