@@ -15,4 +15,4 @@ cd ../
 # run tests defined in https://github.com/lsmo-epfl/zeopp-lsmo/tree/master/tests
 cd tests
 
-pytest tests
+pytest test_zeopp.py
