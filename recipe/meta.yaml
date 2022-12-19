@@ -1,5 +1,5 @@
 {% set name = "zeopp-lsmo" %}
-{% set version = "0.4.3" %}
+{% set version = "0.4.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lsmo-epfl/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7fea06f890b1adc8634c380e0772728e12638b280387d76ada7a57db0b5bbffa
+  sha256: 3c0cac4c15d39f9bb59436f62df617ab40c345fdf27b6aa707d199c91f3d69b0
 
 build:
   number: 0
@@ -20,13 +20,20 @@ requirements:
     - {{ compiler('cxx') }}
     - make
     - libtool
+    - pytest
   host:
-    - eigen >=3.2.8,<3.4
+    - eigen >=3.2.8
 
 test:
+  requires:
+    - pytest
+  source_files:
+    - tests/
   commands:
     - network
     - voro++ -h
+    - export ZEOPP_BINARY=network && cd tests && pytest test_zeopp.py
+
 
 about:
   home: https://github.com/lsmo-epfl/zeopp-lsmo
