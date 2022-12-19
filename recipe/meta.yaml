@@ -25,6 +25,8 @@ requirements:
     - eigen >=3.2.8
 
 test:
+  requires:
+    - pytest
   source_files:
     - tests/
   commands:
