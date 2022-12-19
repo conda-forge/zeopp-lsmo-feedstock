@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lsmo-epfl/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f7ba58afc0ee68e31ecc60bf91efa7020c42204f5d006151259656789966d293
+  sha256: 74ea4de20c18593564a1f74b7ea342903dce2de07be92d768e86c1d3db866521
 
 build:
   number: 0
