@@ -1,5 +1,5 @@
 {% set name = "zeopp-lsmo" %}
-{% set version = "0.4.6" %}
+{% set version = "0.4.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/lsmo-epfl/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 74ea4de20c18593564a1f74b7ea342903dce2de07be92d768e86c1d3db866521
+  sha256: 3c0cac4c15d39f9bb59436f62df617ab40c345fdf27b6aa707d199c91f3d69b0
 
 build:
   number: 0
@@ -32,7 +32,7 @@ test:
   commands:
     - network
     - voro++ -h
-    - cd tests && pytest test_zeopp.py
+    - export ZEOPP_BINARY=network && cd tests && pytest test_zeopp.py
 
 
 about:
