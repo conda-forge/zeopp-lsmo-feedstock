@@ -25,6 +25,8 @@ requirements:
     - eigen >=3.2.8
 
 test:
+  source_files:
+    - tests/
   commands:
     - network
     - voro++ -h

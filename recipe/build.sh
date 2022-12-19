@@ -11,4 +11,3 @@ cd zeo++
 CFLAGS="$CFLAGS -I$PREFIX/include/eigen3" make
 cp network ${PREFIX}/bin/
 cd ../
-
