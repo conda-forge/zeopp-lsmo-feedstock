@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make
     - libtool
+    - pytest
   host:
     - eigen >=3.2.8
 

@@ -15,5 +15,4 @@ cd ../
 # run tests defined in https://github.com/lsmo-epfl/zeopp-lsmo/tree/master/tests
 cd tests
 
-pip install pytest
 pytest tests
