@@ -28,6 +28,8 @@ test:
   commands:
     - network
     - voro++ -h
+    - cd tests && pytest test_zeopp.py
+
 
 about:
   home: https://github.com/lsmo-epfl/zeopp-lsmo
